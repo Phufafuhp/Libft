@@ -6,14 +6,13 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 17:12:03 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/24 17:12:04 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/28 17:53:59 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }

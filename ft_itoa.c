@@ -1,4 +1,16 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/28 17:37:15 by phufsomc          #+#    #+#             */
+/*   Updated: 2026/08/28 17:54:19 by phufsomc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static size_t	ft_intlen(int n)
 {
@@ -28,7 +40,7 @@ static size_t	ft_intlen(int n)
 
 static char	*ft_getarr(int n, char *a, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = size - 2;
 	a[i + 1] = '\0';
@@ -69,7 +81,7 @@ char	*ft_itoa(int n)
 {
 	char	*a;
 	size_t	size;
-	
+
 	size = ft_intlen(n) + 1;
 	a = malloc(size * sizeof(char));
 	if (a == ((void *)0))

@@ -5,21 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/24 17:11:57 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/24 17:11:58 by phufsomc         ###   ########.fr       */
+/*   Created: 2026/08/28 17:43:42 by phufsomc          #+#    #+#             */
+/*   Updated: 2026/08/28 17:55:19 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
-    size_t	i;
+	size_t	i;
 
-    i = 0;
-    while (str[i]) 
-    {
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }

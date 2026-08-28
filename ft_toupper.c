@@ -5,16 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/24 17:09:33 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/24 17:09:34 by phufsomc         ###   ########.fr       */
+/*   Created: 2026/08/28 17:47:39 by phufsomc          #+#    #+#             */
+/*   Updated: 2026/08/28 17:56:16 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-    {
-        c -= 32;
-    }
-    return (c);
+	if (c >= 'a' && c <= 'z')
+	{
+		c -= 32;
+	}
+	return (c);
 }

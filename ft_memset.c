@@ -5,22 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/24 17:11:58 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/24 17:11:59 by phufsomc         ###   ########.fr       */
+/*   Created: 2026/08/28 17:38:16 by phufsomc          #+#    #+#             */
+/*   Updated: 2026/08/28 17:54:32 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-    size_t	i;
+	size_t	i;
 
-    i = 0;
-    while (i < n)
-    {
-        ((unsigned char *)s)[i] = c;
-        i++;
-    }
-    return (s);
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)s)[i] = c;
+		i++;
+	}
+	return (s);
 }
