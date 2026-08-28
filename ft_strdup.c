@@ -1,12 +1,10 @@
-#include "libft.h"
-#include <stdlib.h>
 #include <stddef.h>
 
-char *ft_strdup(const char *str)
+char	*ft_strdup(const char *str)
 {
-    size_t size;
-    char *dup;
-    size_t i;
+    size_t	size;
+    char	*dup;
+    size_t	i;
 
     size = 0;
     while (str[size]) 
@@ -14,6 +12,10 @@ char *ft_strdup(const char *str)
         size++;
     }
     dup = malloc(sizeof(char) * size + 1);
+    if (dup == ((void *)0))
+    {
+        return (((void *)0));
+    }
     i = 0;
     while (i < size)
     {
@@ -22,13 +24,4 @@ char *ft_strdup(const char *str)
     }
     dup[i] = '\0';
     return (dup);
-}
-
-#include <stdio.h>
-int main()
-{
-    char str[] = "Hello.";
-    char *dup = ft_strdup(str);
-    printf("%s\n", dup);
-    free(dup);
 }

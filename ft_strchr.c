@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-    int i;
+    int	i;
 
     i = 0;
     while (str[i])
@@ -29,5 +27,5 @@ char *ft_strchr(const char *str, int c)
     {
         return ((char *)&str[i]);
     }
-    return (NULL);
+    return (((void *)0));
 }

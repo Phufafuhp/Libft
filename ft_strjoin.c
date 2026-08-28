@@ -1,0 +1,28 @@
+#include <stdlib.h>
+
+char	*ft_strjoin(const char *s1, const char *s2)
+{
+    int		i;
+    int		j;
+    char	*join;
+
+    if (s1 == ((void *)0) || s2 == ((void *)0))
+        return (((void *)0));
+    join = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+    if (join == ((void *)0))
+        return (((void *)0));
+    i = 0;
+    j = 0;
+    while (s1[i])
+    {
+        join[i] = s1[i];
+        i++;
+    }
+    while (s2[j])
+    {
+        join[i+j] = s2[j];
+        j++;
+    }
+    join[i+j] = '\0';
+    return (join);
+}

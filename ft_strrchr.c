@@ -10,12 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char *ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-    int i;
-    char *j;
+    int		i;
+    char	*j;
 
     i = 0;
     j = 0;
@@ -35,5 +33,5 @@ char *ft_strrchr(const char *str, int c)
     {
         return j;
     }
-    return (NULL);
+    return (((void *)0));
 }
