@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:47:12 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/28 17:56:10 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/29 15:46:36 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,12 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	j;
 	char	*trim;
 
+	if (!s1)
+		return (NULL);
 	trim = malloc((ft_trimlen(s1, set) + 1) * sizeof(char));
-	if (trim == ((void *)0))
+	if (!trim)
 	{
-		return (((void *)0));
+		return (NULL);
 	}
 	i = 0;
 	j = 0;

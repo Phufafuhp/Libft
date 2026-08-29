@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:47:25 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/28 17:56:12 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/29 14:24:30 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ char	*ft_substr(const char *str, unsigned int start, size_t len)
 	char	*sub;
 	size_t	i;
 
-	if (str == ((void *)0) || len <= 0 || (size_t)start > ft_strlen(str))
+	if (!str || len <= 0 || (size_t)start > ft_strlen(str))
 	{
-		return (((void *)0));
+		return (NULL);
 	}
 	sub = malloc((len + 1) * len);
-	if (sub == ((void *)0))
+	if (!sub)
 	{
-		return (((void *)0));
+		return (NULL);
 	}
 	i = 0;
 	while (i < len)

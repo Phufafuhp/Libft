@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:40:59 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/28 17:55:00 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/29 15:39:01 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strchr(const char *str, int c)
 {
 	int	i;
 
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{
@@ -29,5 +31,5 @@ char	*ft_strchr(const char *str, int c)
 	{
 		return ((char *)&str[i]);
 	}
-	return (((void *)0));
+	return (NULL);
 }

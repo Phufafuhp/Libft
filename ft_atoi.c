@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 17:08:17 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/28 17:53:58 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/29 14:05:35 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	neg = 1;
 	num = 0;
-	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
-		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
 	{
 		i++;
 	}

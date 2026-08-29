@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:36:42 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/28 17:54:23 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/29 17:02:46 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		i++;
 	}
-	return (((void *)0));
+	return (NULL);
 }

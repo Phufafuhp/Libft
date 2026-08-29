@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:42:12 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/28 17:55:09 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/29 14:44:43 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	int		j;
 	char	*join;
 
-	if (s1 == ((void *)0) || s2 == ((void *)0))
-		return (((void *)0));
+	if (!s1 || !s2)
+		return (NULL);
 	join = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-	if (join == ((void *)0))
-		return (((void *)0));
+	if (!join)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s1[i])

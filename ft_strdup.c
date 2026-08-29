@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:41:05 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/28 17:55:03 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/29 15:40:36 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,17 @@ char	*ft_strdup(const char *str)
 	char	*dup;
 	size_t	i;
 
+	if (!str)
+		return (NULL);
 	size = 0;
 	while (str[size])
 	{
 		size++;
 	}
 	dup = malloc(sizeof(char) * size + 1);
-	if (dup == ((void *)0))
+	if (!dup)
 	{
-		return (((void *)0));
+		return (NULL);
 	}
 	i = 0;
 	while (i < size)

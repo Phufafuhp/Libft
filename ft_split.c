@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:40:49 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/28 17:54:58 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/29 15:48:52 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,21 @@ static	size_t	ft_wordlen(const char *s, char c, size_t start)
 	return (i - start);
 }
 
+static	char	**ft_freearr(char **split, int j)
+{
+	while (j >= 0)
+	{
+		free(split[j]);
+		j--;
+	}
+	free(split);
+	return (NULL);
+}
+
 static	char	**ft_getarr(const char *s, char c, char **split)
 {
 	size_t	i;
-	size_t	j;
+	int		j;
 	size_t	size;
 
 	i = 0;
@@ -54,15 +65,17 @@ static	char	**ft_getarr(const char *s, char c, char **split)
 	{
 		if (s[i] != c)
 		{
-			size = ft_wordlen(s, c, i) + 1;
-			split[j] = malloc(size * sizeof(char));
-			ft_strlcpy(split[j], s + i, size);
+			size = ft_wordlen(s, c, i);
+			split[j] = ft_substr(s, i, size);
+			if (!split[j])
+				return (ft_freearr(split, j - 1));
 			j++;
-			i += size - 2;
+			i += size;
 		}
-		i++;
+		else
+			i++;
 	}
-	split[j] = '\0';
+	split[j] = NULL;
 	return (split);
 }
 
@@ -70,10 +83,10 @@ char	**ft_split(const char *s, char c)
 {
 	char	**split;
 
+	if (!s)
+		return (NULL);
 	split = malloc((ft_countwords(s, c) + 1) * sizeof(char *));
-	if (split == ((void *)0))
-	{
-		return (((void *)0));
-	}
+	if (!split)
+		return (NULL);
 	return (ft_getarr(s, c, split));
 }

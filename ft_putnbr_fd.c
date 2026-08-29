@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/28 17:41:12 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/29 15:41:25 by phufsomc         ###   ########.fr       */
+/*   Created: 2026/08/29 15:00:09 by phufsomc          #+#    #+#             */
+/*   Updated: 2026/08/29 15:17:19 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
+	long	nb;
+	char	c;
 
-	if (!s || !f)
-		return ;
-	i = 0;
-	while (s[i])
+	nb = n;
+	if (nb < 0)
 	{
-		f(i, &(s[i]));
-		i++;
+		write(fd, "-", 1);
+		nb *= -1;
 	}
+	if (nb > 9)
+		ft_putnbr_fd(nb / 10, fd);
+	c = '0' + nb % 10;
+	write(fd, &c, 1);
 }
