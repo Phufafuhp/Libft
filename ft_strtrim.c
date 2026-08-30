@@ -6,11 +6,12 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:47:12 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/29 15:46:36 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/30 18:54:23 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 static size_t	ft_inset(const int c, const char *set)
 {
@@ -28,47 +29,46 @@ static size_t	ft_inset(const int c, const char *set)
 	return (0);
 }
 
-static size_t	ft_trimlen(const char *s1, const char *set)
+static size_t	ft_trimlen(const char *s1, const char *set, size_t str_len)
 {
-	size_t	i;
-	size_t	len;
+	size_t	start;
+	size_t	end;
 
-	i = 0;
-	len = 0;
-	while (s1[i])
-	{
-		if (ft_inset(s1[i], set) == 0)
-		{
-			len++;
-		}
-		i++;
-	}
-	return (len);
+	start = 0;
+	while (s1[start] && ft_inset(s1[start], set))
+		start++;
+	end = str_len - 1;
+	while (end > 0 && ft_inset(s1[end], set))
+		end--;
+	if (start > end)
+		end = start - 1;
+	return (end - start + 1);
 }
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
+	size_t	str_len;
+	size_t	trim_len;
 	size_t	i;
 	size_t	j;
 	char	*trim;
 
 	if (!s1)
 		return (NULL);
-	trim = malloc((ft_trimlen(s1, set) + 1) * sizeof(char));
+	str_len = ft_strlen(s1);
+	trim_len = ft_trimlen(s1, set, str_len);
+	trim = malloc((trim_len + 1) * sizeof(char));
 	if (!trim)
-	{
 		return (NULL);
-	}
 	i = 0;
-	j = 0;
-	while (s1[i])
-	{
-		if (ft_inset(s1[i], set) == 0)
-		{
-			trim[j] = s1[i];
-			j++;
-		}
+	while (ft_inset(s1[i], set))
 		i++;
+	j = 0;
+	while (j < trim_len)
+	{
+		trim[j] = s1[i];
+		i++;
+		j++;
 	}
 	trim[j] = '\0';
 	return (trim);

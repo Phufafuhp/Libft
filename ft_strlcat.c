@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:42:58 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/29 15:42:29 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/30 18:24:42 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	i;
+	size_t	src_len;
 	size_t	dest_len;
+	size_t	i;
 
+	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
+	if (size < dest_len)
+		return (size + src_len);
 	i = dest_len;
-	while (i < size - 1)
+	while (src[i - dest_len] && i < size - 1)
 	{
 		dest[i] = src[i - dest_len];
 		i++;
 	}
 	dest[i] = '\0';
-	if (dest[size - 1] != '\0')
-	{
-		return (size);
-	}
-	return (ft_strlen(dest) + ft_strlen(src));
+	return (src_len + dest_len);
 }

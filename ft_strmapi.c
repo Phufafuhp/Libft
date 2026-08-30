@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:44:02 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/29 15:43:09 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/30 18:59:34 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	map = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!map)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
 		map[i] = f(i, s[i]);
 		i++;
 	}
+	map[i] = '\0';
 	return (map);
 }

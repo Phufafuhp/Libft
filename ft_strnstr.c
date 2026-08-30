@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:45:17 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/29 15:45:39 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/30 17:18:47 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (i <= len - need_len)
 	{
 		j = 0;
-		while (needle[j] && needle[j] == haystack[i + j])
+		while (needle[j] && needle[j + 1] == haystack[i + j + 1])
 		{
 			j++;
 		}
-		if (haystack[i + j - 1] != 0
-			&& needle[j - 1] == haystack[i + j - 1])
+		if (j == need_len)
 		{
 			return ((char *)&haystack[i]);
 		}
