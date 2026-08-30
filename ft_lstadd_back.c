@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/29 16:59:22 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/30 19:05:23 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/30 19:15:01 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*back;
-	
+
 	if (!lst || !new)
 		return ;
-	
 	if (!*lst)
 	{
 		*lst = new;

@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:47:12 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/30 18:54:23 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/30 19:18:06 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ static size_t	ft_inset(const int c, const char *set)
 	while (set[i])
 	{
 		if (set[i] == c)
-		{
 			return (1);
-		}
 		i++;
 	}
 	return (0);

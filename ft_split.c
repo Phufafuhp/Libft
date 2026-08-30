@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:40:49 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/29 15:48:52 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/08/30 19:16:30 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ static	size_t	ft_countwords(const char *s, char c)
 	while (s[i])
 	{
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-		{
 			words++;
-		}
 		i++;
 	}
 	return (words);
@@ -36,9 +34,7 @@ static	size_t	ft_wordlen(const char *s, char c, size_t start)
 
 	i = start;
 	while (s[i] && s[i] != c)
-	{
 		i++;
-	}
 	return (i - start);
 }
 
