@@ -76,6 +76,6 @@ This project is compiled by a Makefile. The following rules may be used to compi
 
 Various sources were used in the making of this project. Mainly, using the Linux terminal to acces manpages, sites like die.net's [Linux manual pages](https://linux.die.net/man/), [GeeksforGeeks](https://www.geeksforgeeks.org/), and the FreeBSD [Manual Pages Archives](https://man.freebsd.org/cgi/man.cgi).
 
-No AI was used in the writing of this project's code[^1]. Little to no AI was used when researching for this project (the AI being Google's automatic AI overview). 
+No AI was used in the writing of this project's code[^1]. Little to no AI was used when researching for this project (the only AI used being Google's automatic AI overview). 
 
 [^1]:I'm writing this with my very own hands. I have fingers and a working brain, and I will put them to good use until they give out.
