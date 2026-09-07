@@ -67,7 +67,7 @@ The following functions are used to manipulate linked lists.
 
 This project is compiled by a Makefile. The following rules may be used to compile or otherwise manipulate the library.
 
-- `make` compiles all files into object files, and into a static library.
+- `make` or `make all` compiles all files into object files, and into a static library.
 - `make clean` deletes all object files.
 - `make fclean` deletes all object files, and deletes the library file.
 - `make re` is equivalent to `make fclean`, then `make all`; essentially recompiling the library.
@@ -78,4 +78,4 @@ Various sources were used in the making of this project. Mainly, using the Linux
 
 No AI was used in the writing of this project's code[^1]. Little to no AI was used when researching for this project (the AI being Google's automatic AI overview). 
 
-[^1]:I'm writing this with my very own hands. I have fingers and a working brain, and I will put them to good use.
+[^1]:I'm writing this with my very own hands. I have fingers and a working brain, and I will put them to good use until they give out.
