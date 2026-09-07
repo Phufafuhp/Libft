@@ -2,7 +2,7 @@ _This project has been created as part of the 42 curriculum by phufsomc._
 
 # Description
 
-Libft is a C library, containing various functions from the C standard library, and functions specifically made for the library
+Libft is a C library, containing various functions from the C standard library, and functions specifically made for the library.
 
 The functions are split into three sections:
 
