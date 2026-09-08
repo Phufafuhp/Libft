@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 16:38:14 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/30 16:32:08 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/09/08 15:40:31 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 char			*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
-int				ft_atoi(char *str);
+int				ft_atoi(const char *str);
 void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_strdup(const char *str);
 char			*ft_substr(const char *str, unsigned int start, size_t len);

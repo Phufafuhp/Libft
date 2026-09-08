@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/29 16:59:22 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/30 19:15:01 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/09/08 17:55:36 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	back = *lst;
-	while (back->next)
-		(back = back->next);
+	back = ft_lstlast(*lst);
 	back->next = new;
-	new->next = NULL;
 }

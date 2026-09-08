@@ -6,13 +6,13 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 17:08:17 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/30 16:17:19 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/09/08 15:39:50 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	neg;

@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:47:12 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/30 19:18:06 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/09/08 17:08:24 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,8 @@ static size_t	ft_trimlen(const char *s1, const char *set, size_t str_len)
 	while (s1[start] && ft_inset(s1[start], set))
 		start++;
 	end = str_len - 1;
-	while (end > 0 && ft_inset(s1[end], set))
+	while (end > 0 && ft_inset(s1[end], set) && end > start)
 		end--;
-	if (start > end)
-		end = start - 1;
 	return (end - start + 1);
 }
 

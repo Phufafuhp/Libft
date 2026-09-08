@@ -6,7 +6,7 @@
 /*   By: phufsomc <phufsomc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:47:25 by phufsomc          #+#    #+#             */
-/*   Updated: 2026/08/30 18:45:38 by phufsomc         ###   ########.fr       */
+/*   Updated: 2026/09/08 18:02:24 by phufsomc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(const char *str, unsigned int start, size_t len)
 	if (!str)
 		return (NULL);
 	str_len = ft_strlen(str);
-	if (start < str_len - 1 && start + len + 1 > str_len)
+	if (start < str_len && start + len + 1 > str_len)
 		len = str_len - start;
 	else if (start > str_len)
 		len = 0;
